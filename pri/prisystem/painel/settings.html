@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>PriSystem - Configurações</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="app-header-title">PriSystem</div>
+      <div class="app-header-status">
+        <span id="header-bot-type">Chatbot: —</span>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <aside class="sidebar">
+        <ul class="sidebar-nav">
+          <li><a href="index.html" class="sidebar-link">Agendamentos</a></li>
+          <li><a href="customers.html" class="sidebar-link">Clientes</a></li>
+          <li><a href="settings.html" class="sidebar-link active">Configurações</a></li>
+        </ul>
+      </aside>
+
+      <section class="content">
+        <div class="card">
+          <h1 class="card-title">Configurações do chatbot</h1>
+
+          <div id="settings-status" class="form-label" style="margin-bottom: 8px;"></div>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label class="form-label" for="bot-type">Chatbot utilizado</label>
+              <select id="bot-type" class="form-select">
+                <option value="rule">Chatbot programado</option>
+                <option value="ai">Chatbot IA</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="welcome-message">Mensagem de boas-vindas</label>
+              <textarea id="welcome-message" class="form-textarea" placeholder="Texto enviado quando a conversa começa."></textarea>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="closing-message">Mensagem de encerramento</label>
+              <textarea id="closing-message" class="form-textarea" placeholder="Texto enviado ao finalizar o atendimento."></textarea>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="open-hour">Horário de abertura</label>
+              <input id="open-hour" type="time" class="form-input" />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="close-hour">Horário de fechamento</label>
+              <input id="close-hour" type="time" class="form-input" />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="notes">Notas internas</label>
+              <textarea id="notes" class="form-textarea" placeholder="Anotações internas sobre o chatbot, modelo usado, regras especiais, etc."></textarea>
+            </div>
+          </div>
+
+          <button id="save-settings" class="button-primary">
+            Salvar alterações
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

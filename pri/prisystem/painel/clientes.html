@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clientes - Painel</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Clientes</h1>
+    <nav>
+      <a href="index.html">Agenda</a>
+      <a href="clientes.html" class="active">Clientes</a>
+      <a href="chatbot.html">Chatbot</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="card">
+      <h2>Lista de clientes</h2>
+      <p>Clientes que já falaram com o chatbot ou têm agendamentos.</p>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Agendamentos</th>
+            <th>Último agendamento</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="customers-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <div id="block-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Bloquear cliente</h3>
+      <p id="block-modal-text"></p>
+      <label>
+        Motivo do bloqueio
+        <textarea id="block-reason" rows="3" placeholder="Ex.: Cliente pediu para não receber mensagens."></textarea>
+      </label>
+      <div class="modal-actions">
+        <button id="block-cancel">Cancelar</button>
+        <button id="block-confirm" class="danger">Confirmar bloqueio</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/clientes.js"></script>
+</body>
+</html>
